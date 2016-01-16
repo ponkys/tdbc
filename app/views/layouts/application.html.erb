@@ -14,9 +14,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-	<header id="main_header" class="cf">
+
+<% if alert %>
+	<p class="alert">
+		<%= alert %>
+	</p>
+	<% elsif notice %>
+	<p class="notice">
+		<%= notice %>	
+	</p>
+<% end %>
+
+	<!-- <header id="main_header" class="cf">
 		<div class="wrapper_wide">
 			<a href="#" id="logo">TDBC</a>
 			<nav>
@@ -27,10 +36,10 @@
 				</ul>
 		</nav>
 		</div>	
-	</header>
-
-
+	</header> -->
 <%= yield %>
+
+
 
 </body>
 </html>

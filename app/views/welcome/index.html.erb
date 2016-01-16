@@ -1,22 +1,29 @@
-<body id="bg">
-<!-- when this becomes a welcome page, please uncomment!!! -->
-<!-- <header class="cf">
+<div id="bg">
+	<header class="cf">
 		<div class="wrapper_wide">
-			<a href="/#" id="logo">Logo</a>
+			<a href="#" id="logo">TDBC</a>
 			<nav>
 				<ul>
-					<li><a href="" class="explore">Explore</a></li>
-					<li><a href="" class="login">Login</a></li>
-					<li><a href="" class="sign_up">Sign up</a></li>
+					<% unless podcast_signed_in? %>
+					<li><a href="/podindex" class="explore">Explore</a></li>
+					<li><%= link_to "Log in", new_podcast_session_path, class: "signin" %></li>
+					<li><%= link_to "Sign up", new_podcast_registration_path, class: "signup" %></li>
+					<% else %>
+					<li><a href="/podindex" class="explore">Explore</a></li>
+					<li><a href="#">Dasboard</a></li>
+					<li> <%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
+					<% end %>
 				</ul>
 		</nav>
 		</div>	
-	</header> -->
+	</header>
 	<section >
 		<div class="wrapper_skinny">
 			<h1>Digital Traditional Broadcasting Communication</h1>
-			<a href="sign-in.html" class="button_main button_white">Login</a>
+			
+			<%= link_to "Log in", new_podcast_session_path, class: "button_main button_white" %>
+
 			<a href="/podindex.html" class="button_main button_soas">Explore</a>
 		</div>
 	</section>
-</body>
+</div>
