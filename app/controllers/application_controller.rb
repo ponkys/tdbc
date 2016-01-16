@@ -17,10 +17,6 @@ class ApplicationController < ActionController::Base
     
   end
 
-  def podindex
-    render "/podindex"
-  end
-
   def podshow
     render "/podshow"
   end

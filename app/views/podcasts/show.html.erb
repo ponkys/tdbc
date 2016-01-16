@@ -1,23 +1,23 @@
-<% content_for :stylesheets do %>
-<% end %>
-
 <div id="podcast_show">
 	<div id="show_banner">
 		<div class="wrapper_skinny">
-			<h1>Music & Rituals</h1>
-			<p class="description">Description: The importance of music in social rituals </p>
-			<a href="#" class="subscribe_link">iTunes</a>
+			<h1><%= @podcast.title %></h1>
+			<p class="description"><%= @podcast.description %></p>
+			<% unless @podcast.itunes.blank? %>
+				<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+			<% end %>
 			<!-- <a href="#" class="subscribe_link">Stitcher</a>
 			<a href="#" class="subscribe_link">Podbay</a> -->
 		</div>
 	</div>
 
 	<div id="breadcrumb">
-		<a href="#">
+	<%= link_to podcasts_path do %>
+
 			All podcasts 
 			<span>/</span>
 			Music & Rituals
-		</a>
+		<% end %>
 	</div>
 
 	<div id="episodes" >

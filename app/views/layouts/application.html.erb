@@ -29,11 +29,11 @@
 			<nav>
 				<ul>
 					<% unless podcast_signed_in? %>
-					<li><a href="/podindex" class="explore">Explore</a></li>
+					<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
 					<li><%= link_to "Log in", new_podcast_session_path, class: "signin" %></li>
 					<li><%= link_to "Sign up", new_podcast_registration_path, class: "signup" %></li>
 					<% else %>
-					<li><a href="/podindex" class="explore">Explore</a></li>
+					<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
 					<li><a href="#">Dasboard</a></li>
 					<li> <%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
 					<% end %>
