@@ -79,36 +79,36 @@ $light: #EDEFF5;
 	min-width: 8.5;
 }
 
-// #main_header {
-// 		color: $dark;
-// 		background: $white;
-// 		padding: 2.5rem 0;
+#main_header {
+		color: $dark;
+		background: $white;
+		padding: 2.5rem 0;
 		
-// 			#logo {
-// 				float: left;
-// 				text-transform: uppercase;
-// 				font-weight: 700;
-// 				color: $violet;
-// 				text-decoration: none;
-// 			}
-// 			nav {
-// 				float: right;
-// 				ul {
-// 					list-style: none;
-// 					margin: 0;
-// 					li {
-// 						display: inline;
-// 						margin-left: 2.5rem;
+			#logo {
+				float: left;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: $violet;
+				text-decoration: none;
+			}
+			nav {
+				float: right;
+				ul {
+					list-style: none;
+					margin: 0;
+					li {
+						display: inline;
+						margin-left: 2.5rem;
 
-// 						a {
-// 							color: $violet;
-// 							text-decoration: none;
-// 						}
-// 					}
-// 				}
+						a {
+							color: $violet;
+							text-decoration: none;
+						}
+					}
+				}
 
-// 			}
-// 		}
+			}
+ 		}
 
 //*** Form style ***///
 .field {
@@ -134,8 +134,85 @@ textarea {
 	padding: 0 0 5rem 0;
 }
 
-@import 'normalize.scss';
+//** Banners **///	
+
+#banner {	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 4rem;
+	h1 {
+		text-align: center;
+		color: $white;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin: 0;
+		padding: 8rem 0;
+	}
+}
+//**** Podcast banner *****/////
+.podcast_banner {
+	background-image: image-url('discover.png')
+}
+//**** Signin view *****/////
+
+.signin_banner {	
+
+	  background-image: image-url('signin.png');
+}
+
+//**** Signup view *****/////
+
+.signup_banner {	
+	  background-image: image-url('signup.png');
+}
+
+//*** Pagination ***///
+
+.pagination {
+	text-align: center;
+	margin: 1rem 0 5rem 0;
+	a, .previous_page, .current, .next_page {
+		padding: 0.75rem 1rem;
+		margin: 0 0.25rem;
+		border-radius: 0.15rem;
+		line-height: 1.25;
+		text-decoration: none;
+		background: #EDEFF5;
+		font-weight: 700;
+		font-size: 0.7rem;
+		font-style: normal;
+		color: $dark;  
+		&:hover {
+			background: $violet;
+			color: $white;
+		}
+	}
+	.current {
+		background: $violet;
+		color: $white;
+	}
+	.disabled {
+		color: #c0c0c0;
+		&:hover{
+		color: #c0c0c0;
+		background: #EDEFF5;
+		}
+	}
+}
+
+.pagination:before, .pagination:after {
+	content: " ";
+	display: table;
+}
+
+.pagination:after {
+	clear: both;
+}
+
+@import 'normalize';
 // @import 'home.scss';
-@import "welcome";
-// @import 'podindex.scss';
+@import 'welcome';
+@import 'podcasts';
  

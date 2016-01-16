@@ -1,40 +1,3 @@
-
-
-.cf:before, .cf:after {
-	content: " ";
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-
-.wrapper_skinny {
-	width: 50%;
-	margin: 0 auto;
-}
-
-#banner {	
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	margin-bottom: 4rem;
-	h1 {
-		text-align: center;
-		color: $white;
-		font-size: 3rem;
-		font-weight: 300;
-		letter-spacing: 1px;
-		margin: 0;
-		padding: 8rem 0;
-	}
-}
-
-.podcast_banner {
-	background-image: url('../assets/discover.png')
-}
-
 #podcast {
 	padding-bottom: 3rem;
 	ul {
@@ -82,46 +45,9 @@
 
 }
 
-.pagination:before, .pagination:after {
-	content: " ";
-	display: table;
-}
 
-.pagination:after {
-	clear: both;
-}
 
-.pagination {
-	text-align: center;
-	margin: 1rem 0 5rem 0;
-	a, .previous_page, .current, .next_page {
-		padding: 0.75rem 1rem;
-		margin: 0 0.25rem;
-		border-radius: 0.15rem;
-		line-height: 1.25;
-		text-decoration: none;
-		background: #EDEFF5;
-		font-weight: 700;
-		font-size: 0.7rem;
-		font-style: normal;
-		color: $dark;  
-		&:hover {
-			background: $violet;
-			color: $white;
-		}
-	}
-	.current {
-		background: $violet;
-		color: $white;
-	}
-	.disabled {
-		color: #c0c0c0;
-		&:hover{
-		color: #c0c0c0;
-		background: #EDEFF5;
-		}
-	}
-}
+
 
 //***** Podcast show styles ********//
 
@@ -280,16 +206,4 @@
 	}
 }
 
-//**** Signin view *****/////
 
-.signin_banner {	
-
-	  background-image: url('../assets/signin.png');
-}
-
-	
-//**** Signup view *****/////
-
-.signup_banner {	
-	  background-image: url('../assets/signup.png');
-}
