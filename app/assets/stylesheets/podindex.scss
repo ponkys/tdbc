@@ -1,0 +1,116 @@
+.cf:before, .cf:after {
+	content: " ";
+	margin: 0 auto;
+}
+
+.cf:after {
+	clear: both;
+}
+
+#banner {	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 4rem;
+	h1 {
+		text-align: center;
+		color: $white;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin: 0;
+		padding: 8rem 0;
+	}
+}
+
+.podcast_banner {
+	background-image: url('../assets/discover.png')
+}
+
+#podcast {
+	padding-bottom: 3rem;
+	ul {
+		list-style: none;
+		padding-left: none;
+		margin: 0; 
+		li {
+			width: 23%;
+			float: left;
+			margin: 0 1% 2rem 1%;
+			-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+			box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+			border-radius: 0.35rem;
+			img {
+				width: 100%;
+				max-width: 100%;
+				border-radius: 0.35rem 0.35rem 0 0;
+			}
+			.podcast_overview {
+				padding: 1rem 7.5%;
+				h2 {
+					margin: 0;
+					font-size: 1rem;
+					font-weight: 700;
+					color: $dark;
+				}
+				.episode_count {
+					color: lighten($dark, 40%);
+					font-size: 0.9rem;
+					margin: 0.5rem 0 0.25rem 0;
+				}
+			}
+			&:hover {
+				img {
+					opacity: 0.8;
+				}
+				.podcast_overview {
+					h2 {
+						color: $violet;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.pagination:before, .pagination:after {
+	content: " ";
+	display: table;
+}
+
+.pagination:after {
+	clear: both;
+}
+
+.pagination {
+	text-align: center;
+	margin: 1rem 0 5rem 0;
+	a, .previous_page, .current, .next_page {
+		padding: 0.75rem 1rem;
+		margin: 0 0.25rem;
+		border-radius: 0.15rem;
+		line-height: 1.25;
+		text-decoration: none;
+		background: #EDEFF5;
+		font-weight: 700;
+		font-size: 0.7rem;
+		font-style: normal;
+		color: $dark;  
+		&:hover {
+			background: $violet;
+			color: $white;
+		}
+	}
+	.current {
+		background: $violet;
+		color: $white;
+	}
+	.disabled {
+		color: #c0c0c0;
+		&:hover{
+		color: #c0c0c0;
+		background: #EDEFF5;
+		}
+	}
+}
