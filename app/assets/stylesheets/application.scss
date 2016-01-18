@@ -18,6 +18,7 @@ $light: #EDEFF5;
 	margin: 0 auto;
 }
 
+
 .cf:before, .cf:after {
 	content: " ";
 	display: table;
@@ -33,6 +34,7 @@ $light: #EDEFF5;
 }
 
 .button_main {
+	text-align: center;
 	color: $white;
 	text-decoration: none;
 	font-size: 1rem;
@@ -46,6 +48,7 @@ $light: #EDEFF5;
 }
 
 .button_soas {
+	text-align: center;
 	background: $violet; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient($violet, $blue); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient($violet, $blue); /* For Opera 11.1 to 12.0 */
@@ -68,6 +71,7 @@ $light: #EDEFF5;
 }
 
 .button {
+	text-align: center;
 	color: $white;
 	text-decoration: none;
 	font-size: 1rem;
@@ -215,4 +219,4 @@ textarea {
 // @import 'home.scss';
 @import 'welcome';
 @import 'podcasts';
- 
+@import 'episodes'; 

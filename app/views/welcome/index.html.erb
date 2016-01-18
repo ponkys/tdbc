@@ -4,21 +4,15 @@
 			<%= link_to "T&DBC", root_path, id: "logo" %>
 			<nav>
 				<ul>
-					<% unless podcast_signed_in? %>
 					<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
 					<li><%= link_to "Log in", new_podcast_session_path, class: "signin" %></li>
 					<li><%= link_to "Sign up", new_podcast_registration_path, class: "signup" %></li>
-					<% else %>
-					<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
-					<li><a href="#">Dasboard</a></li>
-					<li> <%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
-					<% end %>
 				</ul>
 		</nav>
 		</div>	
 	</header>
 	<section >
-		<div class="wrapper_skinny">
+		<div class="wrapper main_title">
 			<h1>Digital Traditional Broadcasting Communication</h1>
 			
 			<%= link_to "Log in", new_podcast_session_path, class: "button_main button_white" %>
