@@ -1,18 +1,42 @@
-<h1>New Episode</h1>
+<div id="podcast_show">
+  <div id="show_banner">
+    <div class="wrapper_skinny">
+      <h1>Music & Rituals</h1>
+    </div>
+  </div>
 
-<%= form_for ([@podcast, @episode]) do |f| %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %>
+    <div id="links">
+      <div class="wrapper_skinny">
+        <ul>
+          <li><%= link_to "Episodes", root_path %></li>
+          <li><%= link_to "New Episodes", new_podcast_episode_path(@podcast), class: "current" %></li>
+          <li><%= link_to "Account Settings", edit_podcast_registration_path %></li>
+          <li><%= link_to "View Podcast", podcast_path(current_podcast) %></li>
+        </ul>
+      </div>
+    </div>
 
-	<br>
-	<br>
+	<h1>New Episode</h1>
+	<div id="form">
+ 		<div class="wrapper_skinny">
+			<%= form_for ([@podcast, @episode]) do |f| %>
+			<div class="field">
+				<%= f.label :title %><br>
+				<%= f.text_field :title %>
+			</div>
+			<br>
+			<br>
+			<div class="field">
+				<%= f.label :description %><br>
+				<%= f.text_area :description %>
+			</div>
+			<br>
+			<br>
+			<div class="actions">
+				<%= f.submit class: "button button_soas button_block" %>
+			</div>
+		</div>
+	</div>
+	<% end %>
 
-	<%= f.label :description %><br>
-	<%= f.text_area :description %>
-
-	<br>
-	<br>
-
-	<%= f.submit %>
-
-<% end %>
+</div>
