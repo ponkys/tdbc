@@ -1,8 +1,8 @@
 <div id="podcast_show">
 	<div id="show_banner">
 		<div class="wrapper_skinny">
-			<h1><%= @podcast.title %></h1>
-			<p class="description"><%= @podcast.description %></p>
+			<h1><%= episode.title %></h1>
+			<p class="description"><%= @episode.description %></p>
 			<% unless @podcast.itunes.blank? %>
 				<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
 			<% end %>
