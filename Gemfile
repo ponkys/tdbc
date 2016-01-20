@@ -23,6 +23,8 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
 gem 'aws-sdk', '< 2.0'
 
+gem 'will_paginate', '~> 3.1'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
