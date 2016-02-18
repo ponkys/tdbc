@@ -90,8 +90,7 @@ Rails.application.configure do
 
   #for mailer devise
 
-  config.action_mailer.default_url_options = { :host => 'thawing-tor-3074.herokuapp.com' }
-  
+  config.action_mailer.default_url_options = {:host => 'thawing-tor-3074.herokuapp.com'}
 
   Rails.application.routes.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
 
