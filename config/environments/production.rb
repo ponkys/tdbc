@@ -83,15 +83,18 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
 
   #for mailer devise  https://rubyonrailshelp.wordpress.com/2014/01/02/setting-up-mailer-using-devise-for-forgot-password/
 
     #from http://devise.plataformatec.com.br/#heroku
   config.assets.initialize_on_precompile = false
+
+  config.action_mailer.default_url_options = { :host => 'thawing-tor-3074.herokuapp.com' }
 
   Rails.application.routes.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
 
