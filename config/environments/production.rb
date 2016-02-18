@@ -93,8 +93,6 @@ Rails.application.configure do
     #from http://devise.plataformatec.com.br/#heroku
   config.assets.initialize_on_precompile = false
 
-  config.action_mailer.default_url_options = { :host => 'thawing-tor-3074.herokuapp.com' }
-
   Rails.application.routes.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
 
   config.action_mailer.delivery_method = :smtp
