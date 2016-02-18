@@ -89,8 +89,8 @@ Rails.application.configure do
   }
 
   #for mailer devise
-
-  config.action_mailer.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
+  
+  config.action_mailer.default_url_options = { :host => 'thawing-tor-3074.herokuapp.com' }
 
   Rails.application.routes.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
 
@@ -100,12 +100,12 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: ENV["GMAIL_DOMAIN"],
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: ENV["GMAIL_DOMAIN"],
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["GMAIL_USERNAME"],
+  password: ENV["GMAIL_PASSWORD"]
   }
 end
