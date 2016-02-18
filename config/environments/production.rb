@@ -88,7 +88,7 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 
-  #for mailer devise
+  #for mailer devise  https://rubyonrailshelp.wordpress.com/2014/01/02/setting-up-mailer-using-devise-for-forgot-password/
 
     #from http://devise.plataformatec.com.br/#heroku
   config.assets.initialize_on_precompile = false
