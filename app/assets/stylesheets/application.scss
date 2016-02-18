@@ -28,6 +28,20 @@ $light: #EDEFF5;
 	clear: both;
 }
 
+#notice_wrapper {
+	width: 100%;
+	position: absolute;
+	z-index: 999;
+	background: rgba($violet, 0.8);
+	p {
+		color: white;
+		text-align: center;
+		font-weight: 700;
+		font-size: 1.25rem;
+		padding: 1.5rem 0;
+	}
+}
+
 .wrapper_skinny {
 	width: 50%;
 	margin: 0 auto;
