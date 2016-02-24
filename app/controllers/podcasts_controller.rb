@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-	before_action :authenticate_admin!, except: [:show, :index]
+	
 	before_action :find_podcast, only: [:show, :dashboard]
 	before_action :find_episode, only: [:show, :dashboard]
 
