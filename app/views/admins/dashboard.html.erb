@@ -2,19 +2,10 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1><%= @admin.title %></h1>
+      <h1>Title</h1>
     </div>
   </div>
 
-    <div id="links">
-      <div class="wrapper_skinny">
-        <ul>
-          <li><%= link_to "Episodes", root_path, class: "current" %></li>
-          <li><%= link_to "New Podcast", new_podcast_path(@podcast)%></li>
-          <li><%= link_to "Account Settings", edit_admin_registration_path %></li>
-        </ul>
-      </div>
-    </div>
 
 
   <div id="podcast" class="cf">
@@ -26,7 +17,7 @@
             <%= image_tag podcast.thumbnail.url(:medium) %>
             <div class="podcast_overview">
               <h2><%= podcast.title %></h2>
-              <p class="episode_count"><%= @episode.count %></p>
+              <p class="episode_count">1 Episode</p>
             </div>  
           </li>
         <% end %>

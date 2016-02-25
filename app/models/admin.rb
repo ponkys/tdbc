@@ -5,4 +5,7 @@ class Admin < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :podcasts
+
+	has_attached_file :thumbnail, styles: { large: "700x700#", medium: "500x500#" }
+  	validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\Z/
 end
