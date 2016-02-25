@@ -6,13 +6,17 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    
-    
+
   resources :podcasts, only: [:index, :show] do
     resources :episodes
   end
 
   authenticated :podcast do
     root 'podcasts#dashboard', as: "authenticated_root"
+  end
+
+  authenticated :admin do
+    root 'admins#dashboard', as: "authenticated_root"
   end
   
   root 'welcome#index'

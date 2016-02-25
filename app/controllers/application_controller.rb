@@ -16,24 +16,5 @@ class ApplicationController < ActionController::Base
       :itunes, :thumbnail)}
     
   end
-
-  def podshow
-    render "/podshow"
-  end
-
-  def episodeshow
-    render "/episodeshow"
-  end
   
-  def dashboard
-    render "/dashboard"
-  end
-
-  def signin
-    render "/sign-in"
-  end
-
-  def signup
-    render "/sign-up"
-  end
 end
