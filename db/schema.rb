@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225125241) do
+ActiveRecord::Schema.define(version: 20160225135346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20160225125241) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "title"
+    t.integer  "admin_id"
   end
 
+  add_index "admins", ["admin_id"], name: "index_admins_on_admin_id", using: :btree
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
@@ -78,5 +80,6 @@ ActiveRecord::Schema.define(version: 20160225125241) do
   add_index "podcasts", ["email"], name: "index_podcasts_on_email", unique: true, using: :btree
   add_index "podcasts", ["reset_password_token"], name: "index_podcasts_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "admins", "admins"
   add_foreign_key "episodes", "podcasts"
 end
