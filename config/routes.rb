@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   authenticated :admin do
-    root 'admins#dashboard', as: "authenticated_root"
+    root 'admins#dashboard', as: "authenticated_root_admin"
   end
   
   root 'welcome#index'
