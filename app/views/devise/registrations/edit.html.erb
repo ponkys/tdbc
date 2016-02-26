@@ -1,7 +1,7 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1><%= @admin.title %></h1>
+      
     </div>
   </div>
 
@@ -59,6 +59,8 @@
         <%= f.submit "Update", class: "button button_soas button_block" %>
       </div>
     <% end %>
+
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
   </div>
 </div>
