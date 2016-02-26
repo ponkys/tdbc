@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
    
 
-  resources :podcasts, only: [:index, :show] do
+  resources :podcasts, only: [:index, :show, :new] do
     resources :episodes
   end
 
@@ -18,7 +17,9 @@ Rails.application.routes.draw do
   authenticated :admin do
     root 'admins#dashboard', as: "authenticated_root_admin"
   end
-  
+ 
+  # You can have the root of your site routed with "root"
+
   root 'welcome#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

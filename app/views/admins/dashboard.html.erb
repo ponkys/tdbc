@@ -2,11 +2,19 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1>Title</h1>
+      <h1><%= @admin.title %></h1>
     </div>
   </div>
 
-
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to "Episodes", root_path, class: "current" %></li>
+        <li><%= link_to "New Podcast", new_podcast_path(@podcast)%></li>
+        <li><%= link_to "Account Settings", edit_admin_registration_path %></li>
+      </ul>
+    </div>
+  </div>
 
   <div id="podcast" class="cf">
   <div class="wrapper">
@@ -25,26 +33,4 @@
     </ul>
   </div>
 
-
-  <div id="episodes" >
-      <div class="wrapper_skinny">
-        <ul class="cf">
-          <% @episodes.each do |episode| %> 
-            <li class="cf">
-              <div class="episode_thumbnail">
-                <% link_to episode.title, podcast_episode_path(@podcast, episode) %> <%= link_to image_tag(episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail"), podcast_episode_path(@podcast, episode) %>
-              </div> 
-              <div class="episode_overview">
-                <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
-                <p class="description"><%= truncate(episode.description, lenght: 160) %></p>
-                <div class="authorized_links">
-                  <%= link_to "Edit", edit_podcast_episode_path(@podcast, episode) %>
-                  <%= link_to "Delete", podcast_episode_path(@podcast, episode), method: :delete, data: {confirm: "Are you sure?"} %>
-                </div>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
+</div>
