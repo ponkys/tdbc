@@ -1,6 +1,5 @@
 class EpisodesController < ApplicationController
 	before_action :authenticate_admin!, except: [:show, :index]
-	before_filter :require_permission, except: [:show]
 	before_action :find_podcast
 	before_action :find_episode, only: [:show, :edit, :update, :destroy]
 
@@ -52,10 +51,11 @@ class EpisodesController < ApplicationController
 		@episode = Episode.find(params[:id])
 	end
 
-	def require_permission #episodio 24
-		@podcast = Podcast.find(params[:podcast_id])
-		if current_podcast != @podcast
-			redirect_to root_path, notice: "sorry, you are not allowed to view that page"
-		end
-	end
+
+	# def require_permission #episodio 24 es para que otras personas no se metan ni creen en nuevas formas de los demas solo en la de uno.
+	# 	@podcast = Podcast.find(params[:podcast_id])
+	# 	if current_podcast != @podcast
+	# 		redirect_to root_path, notice: "sorry, you are not allowed to view that page"
+	# 	end
+	# end
 end

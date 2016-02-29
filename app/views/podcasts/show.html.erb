@@ -6,6 +6,9 @@
 			<% unless @podcast.itunes.blank? %>
 				<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
 			<% end %>
+			<% if admin_signed_in? %>
+				<%= link_to "New Episode", new_podcast_episode_path(@podcast), class: "button_main button_soas"%>
+			<% end %>
 			<!-- <a href="#" class="subscribe_link">Stitcher</a>
 			<a href="#" class="subscribe_link">Podbay</a> -->
 		</div>
