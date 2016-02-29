@@ -4,6 +4,9 @@ class Admin < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+    validates :title, :email, presence: true
+
 	has_many :podcasts
 
 	has_attached_file :thumbnail, styles: { large: "700x700#", medium: "500x500#" }
