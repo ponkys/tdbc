@@ -89,27 +89,4 @@ Rails.application.configure do
     }
   }
 
-  #for mailer devise  https://rubyonrailshelp.wordpress.com/2014/01/02/setting-up-mailer-using-devise-for-forgot-password/
-
-    #from http://devise.plataformatec.com.br/#heroku
-  config.assets.initialize_on_precompile = false
-
-  config.action_mailer.default_url_options = { :host => 'thawing-tor-3074.herokuapp.com' }
-
-  Rails.application.routes.default_url_options[:host] = 'thawing-tor-3074.herokuapp.com'
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
-  address: "smtp.sendgrid.net",
-  port: 587,
-  domain: 'heroku.com',
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: ENV['SENDGRID_USERNAME'],
-  password: ENV['SENDGRID_PASSWORD']
-}
-
 end
