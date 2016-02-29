@@ -1,11 +1,21 @@
 class PodcastsController < ApplicationController
-	
-	before_action :find_podcast, only: [:show, :dashboard]
+	before_action :authenticate_admin!
+	before_action :find_podcast, only: [:show, :edit, :update, :destroy]
 	before_action :find_episode, only: [:show, :dashboard]
 
 	def new
 		@podcast = Podcast.new
 	end
+
+	def create
+		@podcast = Podcast.new podcast_params
+		if @podcast.save
+			redirect_to podcast_path(@podcast)
+		else
+			render 'new'	
+		end
+	end
+
 
 	def index
 		@podcasts = Podcast.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
@@ -23,16 +33,23 @@ class PodcastsController < ApplicationController
 
 	private
 
+	def podcast_params
+		params.require(:podcast).permit(:title, :description, :episode_thumbnail, :itunes)	
+	end
+
 	def find_episode
 		@episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
 		
 	end
 
 	def find_podcast
-		if params[:id].nil?
-			@podcast = current_podcast
-		else
-			@podcast = Podcast.find(params[:id])
+		@podcast = Podcast.find(params[:id])
+	end
+
+	def require_permission #episodio 24
+		@admin = Admin.find(params[:admin_id])
+		if current_admin != @admin
+			redirect_to root_path, notice: "sorry, you are not allowed to view that page"
 		end
 	end
 end
