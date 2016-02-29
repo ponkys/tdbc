@@ -6,7 +6,7 @@ Rails.application.initialize!
 
 config.action_mailer.default_url_options = { host: 'https://thawing-tor-3074.herokuapp.com/'}
 
-config.action_mailer.delivery_metho = :smtp
+config.action_mailer.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
 :address        => 'smtp.sendgrid.net',
