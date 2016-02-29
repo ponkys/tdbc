@@ -1,3 +1,10 @@
 // Place all the styles related to the admins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.current_admin_thumbnail {
+	display: block;
+	margin: 0 auto;
+	width: 10rem;
+	max-width: 100%;
+	border-radius: 1.35rem;
+}
