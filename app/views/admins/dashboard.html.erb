@@ -11,8 +11,8 @@
     <div class="wrapper_skinny">
       <ul>
         <li><%= link_to "Dashboard", root_path, class: "current" %></li>
-        <li><%= link_to "New Podcast", new_podcast_path(@podcast)%></li>
         <li><%= link_to "Account Settings", edit_admin_registration_path %></li>
+        <li><%= link_to "New Podcast", new_podcast_path(@podcast)%></li>
       </ul>
     </div>
   </div>
@@ -27,7 +27,7 @@
             <div class="podcast_overview">
               <h2><%= podcast.title %></h2>
               <p class="episode_count">1 Episode</p>
-            </div>  
+            </div> 
           </li>
         <% end %>
       <% end %>

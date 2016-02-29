@@ -1,5 +1,5 @@
 class EpisodesController < ApplicationController
-	before_action :authenticate_podcast!, except: [:show, :index]
+	before_action :authenticate_admin!, except: [:show, :index]
 	before_filter :require_permission, except: [:show]
 	before_action :find_podcast
 	before_action :find_episode, only: [:show, :edit, :update, :destroy]

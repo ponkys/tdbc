@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-	before_action :authenticate_admin!
+	before_action :authenticate_admin!, except: [:show, :index]
 	before_action :find_podcast, only: [:show, :edit, :update, :destroy]
 	before_action :find_episode, only: [:show, :dashboard]
 
@@ -23,18 +23,34 @@ class PodcastsController < ApplicationController
 	end
 
 	def show
-		
-		
+			
 	end
 
 	def dashboard
 		
 	end
 
+	def edit
+		#@podcast = Podcast.find(params[:id])
+	end
+
+	def update
+		if @podcast.update podcast_params
+			redirect_to podcast_path(@podcast), notice: "Podcast was succesfully updated"
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@podcast.destroy
+		redirect_to root_path
+	end
+
 	private
 
 	def podcast_params
-		params.require(:podcast).permit(:title, :description, :episode_thumbnail, :itunes)	
+		params.require(:podcast).permit(:title, :description, :thumbnail, :itunes)	
 	end
 
 	def find_episode

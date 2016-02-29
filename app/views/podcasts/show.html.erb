@@ -15,8 +15,14 @@
 		<%= link_to podcasts_path do %>
 			All podcasts 
 			<span>/</span>
-			Music & Rituals
+			<%= @podcast.title %>
 		<% end %>
+		<% if admin_signed_in? %>
+			<span class="light-grey">/</span>
+			<%= link_to "Edit", edit_podcast_path(@podcast) %>
+			<span class="light-grey">/</span>
+			<%= link_to "Delete", podcast_path(@podcast), method: :delete, data: {confirm: "Are you sure?"} %>
+        <% end %>   
 	</div>
 
 	<div id="episodes" >

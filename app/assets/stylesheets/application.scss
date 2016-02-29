@@ -2,12 +2,18 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+
+
 $white: rgba(#ffffff, 0.9);
 $violet: rgba(#cb2265, 0.9);
 $dark: #22292e;
 $blue: #382a67;
 $light: #EDEFF5;
 
+.light-grey {
+	color: lighten($dark, 45%);
+	margin: 0 0.5rem;
+}
 .wrapper_wide {
 	width: 90%;
 	margin: 0 auto;

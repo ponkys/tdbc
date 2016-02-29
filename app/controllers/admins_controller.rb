@@ -1,7 +1,6 @@
 class AdminsController < ApplicationController
 	before_action :authenticate_admin!
-
-	before_action :find_podcasts, only: [:show, :dashboard]
+	before_action :find_podcasts, only: [:show, :dashboard, :edit, :update, :destroy]
 	before_action :find_episodes, only: [:show, :dashboard]
 	before_action :find_admin, only: [:dashboard]
 
