@@ -41,11 +41,11 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
 
-  config.action_mailer.default_url_options = { :host => 'https://thawing-tor-3074.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://localhost:3000/' }
 
   config.action_mailer.delivery_method = :smtp
 
-  Rails.application.routes.default_url_options[:host] = 'https://thawing-tor-3074.herokuapp.com/'
+  Rails.application.routes.default_url_options[:host] = 'http://localhost:3000/'
 
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
