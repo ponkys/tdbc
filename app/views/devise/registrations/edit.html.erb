@@ -1,8 +1,8 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1><%= @admin.name %></h1>
-      <%= image_tag @admin.thumbnail.url(:medium), class: "current_admin_thumbnail" %>
+      <h1><%= @user.name %></h1>
+      <%= image_tag @user.thumbnail.url(:medium), class: "current_user_thumbnail" %>
     </div>
   </div>
 
@@ -10,7 +10,7 @@
     <div class="wrapper_skinny">
       <ul>
         <li><%= link_to "Dashboard", root_path %></li>
-        <li><%= link_to "Account Settings", edit_admin_registration_path, class: "current" %></li>
+        <li><%= link_to "Account Settings", edit_user_registration_path, class: "current" %></li>
         <li><%= link_to "New Podcast", new_podcast_path(@podcast)%></li>       
       </ul>
     </div>

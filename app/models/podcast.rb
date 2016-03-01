@@ -5,7 +5,7 @@ class Podcast < ActiveRecord::Base
          
 
   has_many :episodes
-  belongs_to :admin
+  belongs_to :user
 
   has_attached_file :thumbnail, styles: { large: "700x700#", medium: "500x500#" }
   validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\Z/

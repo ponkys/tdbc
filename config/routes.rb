@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     resources :episodes
   end
 
-  authenticated :admin do
-    root 'admins#dashboard', as: "authenticated_root_admin"
+  authenticated :user do
+    root 'users#dashboard', as: "authenticated_root_user"
   end
  
   # You can have the root of your site routed with "root"
@@ -59,9 +59,9 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
+  #   namespace :user do
+  #     # Directs /user/products/* to User::ProductsController
+  #     # (app/controllers/user/products_controller.rb)
   #     resources :products
   #   end
 end

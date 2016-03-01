@@ -5,8 +5,8 @@
 			<nav>
 				<ul>
 					<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
-					<li><%= link_to "Log in", new_admin_session_path, class: "signin" %></li>
-					<li><%= link_to "Sign up", new_admin_registration_path, class: "signup" %></li>
+					<li><%= link_to "Log in", new_user_session_path, class: "signin" %></li>
+					<li><%= link_to "Sign up", new_user_registration_path, class: "signup" %></li>
 				</ul>
 		</nav>
 		</div>	
@@ -15,7 +15,7 @@
 		<div class="wrapper main_title">
 			<h1>Digital Traditional Broadcasting Communication</h1>
 			
-			<%= link_to "Log in", new_admin_session_path, class: "button_main button_white" %>
+			<%= link_to "Log in", new_user_session_path, class: "button_main button_white" %>
 
 			<%= link_to "Explore", podcasts_path, class: "button_main button_soas" %>
 		</div>

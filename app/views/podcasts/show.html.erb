@@ -20,7 +20,7 @@
 			<span>/</span>
 			<%= @podcast.title %>
 		<% end %>
-		<% if admin_signed_in? %>
+		<% if user_signed_in? %>
 			<span class="light-grey">/</span>
 			<%= link_to "New Episode", new_podcast_episode_path(@podcast)%>
 			<span class="light-grey">/</span>

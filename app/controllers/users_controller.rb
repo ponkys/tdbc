@@ -1,8 +1,8 @@
-class AdminsController < ApplicationController
-	before_action :authenticate_admin!
+class UsersController < ApplicationController
+	before_action :authenticate_user!
 	before_action :find_podcasts, only: [:show, :dashboard, :edit, :update, :destroy]
 	before_action :find_episodes, only: [:show, :dashboard]
-	before_action :find_admin, only: [:dashboard]
+	before_action :find_user, only: [:dashboard]
 
 	def dashboard
 		@podcasts = Podcast.all.order("created_at DESC")
@@ -11,8 +11,8 @@ class AdminsController < ApplicationController
 
 	private
 
-	def admin_params
-		params.require(:admin).permit(:name, :thumbnail, :id)	
+	def user_params
+		params.require(:user).permit(:name, :thumbnail, :id)	
 	end
 
 	def podcast_params
@@ -28,11 +28,11 @@ class AdminsController < ApplicationController
 		@podcast = Podcast.all.order("created_at DESC")
 	end
 
-	def find_admin
+	def find_user
 		if params[:id].nil?
-			@admin = current_admin
+			@user = current_user
 		else
-			@admin = Admin.find(params[:id])
+			@user = User.find(params[:id])
 		end
 	end
 end

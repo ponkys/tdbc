@@ -3,14 +3,14 @@
 		<%= link_to "T&DBC", root_path, id: "logo" %>
 		<nav>
 			<ul>
-				<% unless admin_signed_in? %>
+				<% unless user_signed_in? %>
 				<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
-				<li><%= link_to "Log in", new_admin_session_path, class: "signin" %></li>
-				<li><%= link_to "Sign up", new_admin_registration_path, class: "signup" %></li>
+				<li><%= link_to "Log in", new_user_session_path, class: "signin" %></li>
+				<li><%= link_to "Sign up", new_user_registration_path, class: "signup" %></li>
 				<% else %>
 				<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
 				<li><%= link_to "Dashboard", root_path %></li>
-				<li> <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+				<li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 					
 				<% end %>
 			</ul>
