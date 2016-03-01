@@ -4,10 +4,10 @@
 			<h1><%= @podcast.title %></h1>
 			<p class="description"><%= @podcast.description %></p>
 			<% unless @podcast.itunes.blank? %>
-				<a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+				<a href="<%= @podcast.itunes %>" class="subscribe_link fa fa-apple"> iTunes</a>
 			<% end %>
-			<% if admin_signed_in? %>
-				<%= link_to "New Episode", new_podcast_episode_path(@podcast), class: "button_main button_soas"%>
+			<% unless @podcast.soundcloud.blank? %>
+				<a href="<%= @podcast.soundcloud %>" class="subscribe_link fa fa-soundcloud"> SounCloud</a>
 			<% end %>
 			<!-- <a href="#" class="subscribe_link">Stitcher</a>
 			<a href="#" class="subscribe_link">Podbay</a> -->
@@ -21,6 +21,8 @@
 			<%= @podcast.title %>
 		<% end %>
 		<% if admin_signed_in? %>
+			<span class="light-grey">/</span>
+			<%= link_to "New Episode", new_podcast_episode_path(@podcast)%>
 			<span class="light-grey">/</span>
 			<%= link_to "Edit", edit_podcast_path(@podcast) %>
 			<span class="light-grey">/</span>

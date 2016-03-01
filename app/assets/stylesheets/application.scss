@@ -1,3 +1,7 @@
+/*
+*= require font-awesome
+*/
+
  body {
 	font-family: 'Roboto', sans-serif;
 }
@@ -239,3 +243,4 @@ textarea {
 @import 'podcasts';
 @import 'episodes'; 
 @import 'admins';
+@import "font-awesome.css";

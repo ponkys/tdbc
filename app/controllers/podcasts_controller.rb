@@ -19,7 +19,7 @@ class PodcastsController < ApplicationController
 
 	def index
 		@podcasts = Podcast.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
-		@episode = Podcast.where(params[:id]).episodes
+		
 	end
 
 	def show
@@ -50,7 +50,7 @@ class PodcastsController < ApplicationController
 	private
 
 	def podcast_params
-		params.require(:podcast).permit(:title, :description, :thumbnail, :itunes)	
+		params.require(:podcast).permit(:title, :description, :thumbnail, :itunes, :soundcloud)	
 	end
 
 	def find_episode
