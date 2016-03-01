@@ -5,7 +5,7 @@ class Admin < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
 
-    validates :title, :email, presence: true
+    validates :name, :email, presence: true
 
 	has_many :podcasts
 

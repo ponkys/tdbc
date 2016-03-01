@@ -12,7 +12,7 @@ class AdminsController < ApplicationController
 	private
 
 	def admin_params
-		params.require(:admin).permit(:title, :thumbnail, :id)	
+		params.require(:admin).permit(:name, :thumbnail, :id)	
 	end
 
 	def podcast_params
