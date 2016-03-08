@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 	def dashboard
 		@podcasts = Podcast.all.order("created_at DESC")
-		
+		@episodes = Episode.all
 	end
 
 	private
