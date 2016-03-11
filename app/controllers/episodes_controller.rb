@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
-	before_action :authenticate_user!, except: [:show, :index]
-	before_action :find_podcast
+	before_action :authenticate_user!, except: [:show, :index, :feed, :api]
+	before_action :find_podcast, except: [:feed, :api]
 	before_action :find_episode, only: [:show, :edit, :update, :destroy]
 
 	def new
@@ -14,6 +14,20 @@ class EpisodesController < ApplicationController
 		else
 			render 'new'	
 		end
+	end
+
+	def api
+	    @episodes = Episode.all
+	    respond_to do |format|
+			format.json { render json: @episodes}
+			format.html
+		end
+	end
+
+	def feed
+	    @episodes = Episode.all
+	    #render(:layout => false)
+	    render 'episodes/feed.rss.builder'
 	end
 
 	def show

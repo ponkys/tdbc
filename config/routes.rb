@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'users#dashboard', as: "authenticated_root_user"
   end
+
+  #for RSS
+
+  get 'episodesapi' => 'episodes#api'
+
+  get 'feed' => 'episodes#feed'
  
   # You can have the root of your site routed with "root"
 
