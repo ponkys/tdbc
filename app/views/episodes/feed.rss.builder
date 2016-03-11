@@ -21,7 +21,7 @@ xml.rss :version => "2.0" do
 			    xml.link "https://thawing-tor-3074.herokuapp.com/" + "podcasts/" + episode.podcast_id.to_s + "/episodes/" + episode.id.to_s
 			    xml.guid episode.mp3_file_name
 			    xml.enclosure do
-			    	xml.url "https://thawing-tor-3074.herokuapp.com/" + "podcasts/" + episode.podcast_id.to_s + "/episodes/" + episode.id.to_s + "/" + episode.mp3_file_name
+			    	xml.url "http://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name
 			    	xml.type episode.mp3_content_type
 			    	xml.size episode.mp3_file_size.to_s
 			    end
