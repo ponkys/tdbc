@@ -3,7 +3,7 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
 	xml.channel do
-	    xml.title "Digital & Traditional Broadcasting Communication"
+	    xml.title "Digital and Traditional Broadcasting Communication"
 	    xml.author "SOAS, University of London. | Prof. Caspar Melville"
 	    xml.description "Podcasts from the MA Course Digital & Traditional Broadcasting Communication"
 	    xml.link "https://thawing-tor-3074.herokuapp.com/"

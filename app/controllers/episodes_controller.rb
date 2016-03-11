@@ -20,7 +20,6 @@ class EpisodesController < ApplicationController
 	    @episodes = Episode.all
 	    respond_to do |format|
 			format.json { render json: @episodes}
-			format.html
 		end
 	end
 
