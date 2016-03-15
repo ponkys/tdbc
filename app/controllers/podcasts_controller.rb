@@ -1,7 +1,7 @@
 class PodcastsController < ApplicationController
 	before_action :authenticate_user!, except: [:show, :index]
 	before_action :find_podcast, only: [:show, :edit, :update, :destroy]
-	before_action :find_episode, only: [:show, :dashboard]
+	before_action :find_episode, only: [:show, :dashboard, :index]
 
 	def new
 		@podcast = Podcast.new
@@ -62,10 +62,10 @@ class PodcastsController < ApplicationController
 		@podcast = Podcast.find(params[:id])
 	end
 
-	def require_permission #episodio 24
-		@user = User.find(params[:user_id])
-		if current_user != @user
-			redirect_to root_path, notice: "sorry, you are not allowed to view that page"
-		end
-	end
+	# def require_permission #episodio 24
+	# 	@user = User.find(params[:role])
+	# 	if admin != @user
+	# 		redirect_to root_path, notice: "sorry, you are not allowed to view that page"
+	# 	end
+	# end
 end

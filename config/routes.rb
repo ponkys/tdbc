@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-
   devise_for :users
+
+  authenticated :user do
+   root 'users#dashboard', as: "authenticated_root"
+  end
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
    
 
   resources :podcasts do
     resources :episodes
   end
 
-  authenticated :user do
-    root 'users#dashboard', as: "authenticated_root_user"
-  end
+ root 'welcome#index'
 
   #for RSS
 

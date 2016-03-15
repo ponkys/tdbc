@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:name, :thumbnail, :id)	
+		params.require(:user).permit(:name, :thumbnail, :id, :role)	
 	end
 
 	def podcast_params
