@@ -25,6 +25,7 @@ class EpisodesController < ApplicationController
 
 	def feed
 	    @episodes = Episode.all
+	    @podcast = Podcast.all
 	    #render(:layout => false)
 	    render 'episodes/feed.rss.builder'
 	end
