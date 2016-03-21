@@ -18,7 +18,7 @@ xml.rss :version => "2.0" do
 		    	end
 			    xml.description episode.description
 			    xml.pubDate episode.created_at.to_s(:rfc822)
-			    xml.link "https://thawing-tor-3074.herokuapp.com/" + "podcasts/" + episode.podcast_id.to_s + "/episodes/" + episode.id.to_s
+			    xml.link "http://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name.to_sit
 			    xml.guid "http://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name.to_s
 			    xml.enclosure do
 			    	xml.url "http://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name.to_s
