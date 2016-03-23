@@ -8,10 +8,12 @@
 		padding: 5rem 0;
 		#logo {
 			float: left;
-			text-transform: uppercase;
-			font-weight: 700;
+			font-weight: 400;
 			color: $violet;	
 			text-decoration: none;
+			border: 0.01rem solid $violet;
+			padding: 0.3em;
+			background: rgba($white, 0.1);
 		}
 		nav {
 			float: right;
