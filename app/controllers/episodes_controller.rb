@@ -18,6 +18,7 @@ class EpisodesController < ApplicationController
 
 	def api
 	    @episodes = Episode.all
+	    #@episodesquery = Episode.all.order(:mp3_updated_at)
 	    respond_to do |format|
 			format.json { render json: @episodes}
 		end
@@ -26,6 +27,7 @@ class EpisodesController < ApplicationController
 	def feed
 	    @episodes = Episode.all
 	    @podcast = Podcast.all
+
 	    #render(:layout => false)
 	    render 'episodes/feed.rss.builder'
 	end

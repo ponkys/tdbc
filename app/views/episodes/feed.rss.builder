@@ -9,7 +9,8 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 	    xml.itunes :author, "Sounds like SOAS"
 	    xml.itunes :email, "diego.mosquera.soto@gmail.com"
 	    xml.language "en-us"
-	    xml.lastBuildDate @episodes.first.created_at.to_s(:rfc822)
+	    xml.pubDate @episodes.first.created_at.to_s(:rfc822)
+	    xml.lastBuildDate @episodes.last.updated_at.to_s(:rfc822)
 	    xml.copyright "CC"
 	    xml.webMaster "diego.mosquera.soto@gmail.com"
 	    xml.itunes :keywords, "SOAS podcast University of London"
