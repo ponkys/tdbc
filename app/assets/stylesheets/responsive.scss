@@ -14,6 +14,7 @@
 
 /* xs */
 @media (max-width: 767px) {
+	// Welcome page
 	#bg {
 		header { 
 			padding: 2rem 0;
@@ -30,10 +31,59 @@
 			margin: 1rem 0 2rem 0;
 		}
 	}
+
+	// Episode Show
+	
+	.jp-progress {
+		display: none;
+	}
+	#episode_content {
+		.jp-time-holder{
+			right: 10px;
+		}
+		.jp-audio {
+			width: 40%;
+		}
+	}
+
+	//header bar not welcome = Main nav that is located in Layout
+	#main_header{
+		nav {
+			ul {
+				.signin {
+					display: none;
+				}
+				.signup {
+					display: none;
+				}
+				li {
+					margin-left: .2rem;
+					padding-right: .2rem;
+				}
+			}
+		}
+	} 
+
+	// Dashboard
+	#links {
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: flex-start;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+	}
+
+	
+
 }
 
 /* XS Portrait */
 @media (max-width: 479px) {
+	
+	// Welcome page
 	#bg {
 		header { 
 			padding: 2rem 0;
@@ -55,6 +105,87 @@
 		float: none;
 		.nav_links {
 			display: none;
+		}
+	}
+	
+	//header bar not welcome = Main nav that is located in Layout
+	#main_header{
+		nav {
+			ul {
+				.signin {
+					display: none;
+				}
+				.signup {
+					display: none;
+				}
+				li {
+					margin-left: .2rem;
+					padding-right: .2rem;
+				}
+			}
+		}
+	} 
+
+	// Dasboard
+
+	#links {
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: flex-start;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+	}
+
+	// Podcast index
+
+	#podcast {
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: flex-start;
+			li {
+				width: 100%;
+				float: none;
+				margin: 1rem 1% 0 1%;
+			}
+		}
+	}
+
+	// Episode Show
+	
+	.jp-progress {
+		display: none;
+	}
+	#episode_content {
+		.jp-time-holder{
+			right: 10px;
+		}
+	}
+	.jp-audio {
+		width: 100%;
+	}
+
+	// Episode INDEX
+
+	#podcast_show {
+		#show_banner {
+			padding: 2rem 0 1rem 0;
+			.description {
+				margin: 0 auto 1rem auto;
+				width: 100%;
+			}
+			.subscribe_link {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-content: flex-start;
+				margin-bottom: 5px;
+				margin: 1rem 2rem;
+			}
 		}
 	}
 }
