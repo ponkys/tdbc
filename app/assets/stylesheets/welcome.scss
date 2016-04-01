@@ -5,7 +5,7 @@
   background-position: center;
   height: 100vh;
 	header {
-		padding: 5rem 0;
+		padding: 2.5rem 0;
 		#logo {
 			float: left;
 			font-weight: 400;
@@ -46,12 +46,25 @@
 .main_title {
 	text-align: center;
 	h1 {
-		color: $white;
+		color: #fff;
 		font-size: 3.5rem;
 		font-weight: 300;
 		letter-spacing: 1px;
-		margin: 7rem 0 2rem 0;
+		margin: 9rem 0 2rem 0;
 		text-shadow: 0.3px 0.3px #000000;
+	}
+	.explore {
+		color: $violet;
+		background: rgba(white, 0.9);
+		padding: 1rem 2rem;
+		-webkit-transition-property: padding; /* Safari */
+		-webkit-transition-duration: .1s; /* Safari */
+		transition-property: padding;
+		transition-duration: .1s;
+		&:hover {
+			background: lighten(white, 0.7);
+			padding: 1rem 2.2rem;
+		}
 	}
 }
 	
