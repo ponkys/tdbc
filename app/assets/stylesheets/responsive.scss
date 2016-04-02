@@ -1,33 +1,55 @@
 /* lg */ 
 @media (min-width: 1200px) {
 	// Welcome page
-	.small-screen-menu {
+	.small-screen-burguer {
 		display: none;
+	}
+	#bg {
+		.small_nav_links {
+			display: none;
+		}
 	}
 }
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
 	// Welcome page
-	.small-screen-menu {
+	.small-screen-burguer {
 		display: none;
+	}
+	#bg {
+		.small_nav_links {
+			display: none;
+		}
 	}
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
 	// Welcome page
-	.small-screen-menu {
+	.small-screen-burguer {
 		display: none;
+	}
+	#bg {
+		.small_nav_links {
+			display: none;
+		}
 	}
 }
 
 /* xs */
 @media (max-width: 767px) {
 	// Welcome page
-	.small-screen-menu {
+	.small-screen-burguer {
 		display: none;
 	}
+
+	#bg {
+		.small_nav_links {
+			display: none;
+		}
+	}
+
 	.main_title {
 		h1 {
 			margin: 1rem 0 2rem 0;
