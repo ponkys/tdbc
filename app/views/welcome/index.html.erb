@@ -9,10 +9,21 @@
 					<li><%= link_to "Log in", new_user_session_path, class: "signin" %></li>
 					<li><%= link_to "Sign up", new_user_registration_path, class: "signup" %></li>
 				</ul>
-		</nav>
-		</div>	
+			</nav>
+		</div>
+		<div class="small-screen-burguer">
+		<i onclick="myFunction()" class="fa fa-bars hamburguer dropbtn"></i>
+		</div>
 	</header>
+	<div id="myDropdown" class="small_nav_links dropdown-content">
+		<ul>
+			<li><%= link_to "Explore", podcasts_path, class: "explore" %></li>
+			<li><%= link_to "Log in", new_user_session_path, class: "signin" %></li>
+			<li><%= link_to "Sign up", new_user_registration_path, class: "signup" %></li>
+		</ul>
+	</div>
 	<section >
+
 		<div class="wrapper main_title">
 			<h1>Sounds like SOAS</h1>
 			<%= link_to "Explore", podcasts_path, class: "button_main button_soas explore" %>
@@ -28,7 +39,26 @@
 			</ul>
 	</nav>
 	</div>	
-</header>
+</header> -->
 <script type="text/javascript">
-	
-</script> -->
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script> 

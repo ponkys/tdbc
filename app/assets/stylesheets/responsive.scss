@@ -1,30 +1,32 @@
 /* lg */ 
 @media (min-width: 1200px) {
+	// Welcome page
+	.small-screen-menu {
+		display: none;
+	}
 }
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
-	
+	// Welcome page
+	.small-screen-menu {
+		display: none;
+	}
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
-	
+	// Welcome page
+	.small-screen-menu {
+		display: none;
+	}
 }
 
 /* xs */
 @media (max-width: 767px) {
 	// Welcome page
-	#bg {
-		header { 
-			padding: 2rem 0;
-			#logo {
-				display: none;
-			}
-			.nav_links {
-				display: none;
-			}	
-		}
+	.small-screen-menu {
+		display: none;
 	}
 	.main_title {
 		h1 {
@@ -86,16 +88,54 @@
 	// Welcome page
 	#bg {
 		header { 
-			padding: 2rem 0;
+			padding: 0 0;
+			background-color: rgba($violet, 1);
 			#logo {
 			display: initial;
+			width: 90%;
+			color: white;
+			background-color: rgba($violet, 1);
+			padding: 1rem 0 0 0;
+			}
+			.small-screen-burguer {
+				display: inline;
+				.hamburguer {
+					width: 9%;
+					color: white;
+					padding: 1rem 0;
+					cursor: pointer;
+	    			position: relative;
+	    		}
+	    	}
+	    }
+	.small_nav_links {
+			display: none;
+			background-color: #292c33;
 			width: 100%;
+			ul {
+			list-style: none;
+			display: inline;
+				li {
+					a {
+						color: lighten($violet, 65%);
+						text-decoration: none;
+						&:hover{
+							background: rgba($white, 0.7);
+							color: $violet;
+						}
+					}
+				}
 			}
 		}
 	}
+
+	.show {
+		display: block !important;
+	}
+
 	.main_title {
 		h1 {
-			margin: 2rem 0 2rem 0;
+			margin: 11rem 0 2rem 0;
 		}
 	}
 	.nav_bar {
