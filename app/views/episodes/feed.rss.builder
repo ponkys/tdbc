@@ -5,7 +5,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 	xml.channel do
 	    xml.title "Sounds like SOAS"
 	    xml.link "http://www.soundslikesoas.org/"
-	    xml.description "Podcasts from the MA Course Digital & Traditional Broadcasting Communication"
+	    xml.description "Podcasts from the MA Course Digital & Traditional Broadcasting Communication. SOAS, University of London"
 	    xml.itunes :author, "Sounds like SOAS"
 	    xml.itunes :category, :text => 'Education' do
       		xml.itunes :category, :text => 'Higher Education'
