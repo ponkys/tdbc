@@ -12,8 +12,8 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
    		end
 	    xml.itunes :email, "diego.mosquera.soto@gmail.com"
 	    xml.language "en-us"
-	    xml.image "http://www.soundslikesoas.org/assets/Soundslikesoasitunes-art-work1-0a02d9dc1f6c0e2c328024e3d2112538474f19c9331fefc3ec66417ebb60ab04.jpg"
-	    xml.itunes :image, "http://www.soundslikesoas.org/assets/Soundslikesoasitunes-art-work1-0a02d9dc1f6c0e2c328024e3d2112538474f19c9331fefc3ec66417ebb60ab04.jpg"
+	    xml.image "http://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
+	    xml.itunes :image, "http://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
 	    xml.pubDate @episodes.first.created_at.to_s(:rfc822)
 	    xml.lastBuildDate @episodes.last.updated_at.to_s(:rfc822)
 	    xml.copyright "CC #{Date.today.year}"
