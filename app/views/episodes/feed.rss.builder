@@ -12,8 +12,8 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
    		end
 	    xml.itunes :email, "diego.mosquera.soto@gmail.com"
 	    xml.language "en-us"
-	    xml.image "http://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
-	    xml.itunes :image, "http://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
+	    xml.image "https://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
+	    xml.itunes :image, :href => "http://s3.amazonaws.com/dtbc-soas/images/art-work/Soundslikesoasitunes-art-work1.jpg"
 	    xml.pubDate @episodes.first.created_at.to_s(:rfc822)
 	    xml.lastBuildDate @episodes.last.updated_at.to_s(:rfc822)
 	    xml.copyright "CC #{Date.today.year}"
@@ -32,7 +32,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 			    xml.description episode.description
 			    xml.itunes :summary, episode.description
 			    xml.itunes :keywords, "SOAS podcast University of London"
-			    xml.enclosure :url => "http://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name.to_s,
+			    xml.enclosure :url => "https://s3.amazonaws.com/dtbc-soas/episodes/mp3s/000/000/00" + episode.id.to_s + "/original/" + episode.mp3_file_name.to_s,
 			    	:type => episode.mp3_content_type,
 			    	:length => episode.mp3_file_size.to_s
 			    xml.source :url => "http://www.soundslikesoas.org/podcasts/" + episode.podcast_id.to_s + "/episodes/" + episode.id.to_s
