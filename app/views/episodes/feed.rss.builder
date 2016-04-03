@@ -7,6 +7,9 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 	    xml.link "http://www.soundslikesoas.org/"
 	    xml.description "Podcasts from the MA Course Digital & Traditional Broadcasting Communication"
 	    xml.itunes :author, "Sounds like SOAS"
+	    xml.itunes :category, :text => 'Education' do
+      		xml.itunes :category, :text => 'Higher Education'
+   		end
 	    xml.itunes :email, "diego.mosquera.soto@gmail.com"
 	    xml.language "en-us"
 	    xml.image "http://www.soundslikesoas.org/assets/Soundslikesoasitunes-art-work-0c5114ffe920f5643adc822f46dc4b8bd9c6a520d797d20fa2f1eba7b9c055ff.jpg"
@@ -16,7 +19,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 	    xml.copyright "CC #{Date.today.year}"
 	    xml.webMaster "diego.mosquera.soto@gmail.com"
 	    xml.itunes :keywords, "SOAS podcast University of London"
-	    xml.itunes :explicit, "No"
+	    xml.itunes :explicit, "Yes"
 	    for episode in @episodes
 		    xml.item do
 		        if episode.title
