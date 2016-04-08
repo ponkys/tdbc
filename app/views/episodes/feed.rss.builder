@@ -19,7 +19,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
 	    xml.copyright "CC #{Date.today.year}"
 	    xml.webMaster "diego.mosquera.soto@gmail.com"
 	    xml.itunes :keywords, "SOAS podcast University of London"
-	    xml.itunes :explicit, "Yes"
+	    xml.itunes :explicit, "No"
 	    for episode in @episodes
 		    xml.item do
 		        if episode.title
