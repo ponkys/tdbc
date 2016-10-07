@@ -30,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  # Important! It is needed to activate mailcatcher in the terminal in order to test email features in development environment
+  gem 'mailcatcher'
 end
 
 group :development do
