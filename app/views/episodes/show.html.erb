@@ -31,7 +31,7 @@
 		<div class="wrapper_skinny">
 			<%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
 			<h2><%= @episode.title %></h2>
-			<% if @episode.soundcloud? %>
+			<% unless @episode.soundcloud.blank? %>
 				<a href="<%= @episode.soundcloud %>" class="subscribe_link fa fa-soundcloud"> SoundCloud</a>
 			<% end %>
 			<p class="description"> <%= @episode.description %></p>
