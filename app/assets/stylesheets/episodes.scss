@@ -1,3 +1,25 @@
 // Place all the styles related to the episodes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.subscribe_link {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+    background: $violet; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($violet, $blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($violet, $blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($violet, $blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($violet, $blue); /* Standard syntax */
+    transition: border-radius .2s ease-in-out;
+    display: inline;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    &:hover{
+        color: darken($white, 30%);
+        border-radius: 1.5em;	
+    }
+}
