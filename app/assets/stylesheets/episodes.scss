@@ -13,11 +13,14 @@
     background: -moz-linear-gradient($violet, $blue); /* For Firefox 3.6 to 15 */
     background: linear-gradient($violet, $blue); /* Standard syntax */
     transition: border-radius .2s ease-in-out;
-    display: inline;
     border-radius: 2rem;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     text-decoration: none;
+    margin: 0 auto .5rem auto;
+    width: 10rem;
+    max-width: 100%;
+    display: block;
     &:hover{
         color: darken($white, 30%);
         border-radius: 1.5em;	
